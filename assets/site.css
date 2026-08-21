@@ -1,0 +1,138 @@
+:root {
+  color-scheme: dark;
+  --bg: #0d1117;
+  --surface: #161c24;
+  --surface-raised: #1c242e;
+  --border: #2c3540;
+  --text: #e6edf3;
+  --text-muted: #9aa7b4;
+  --accent: #58a6ff;
+  --accent-soft: rgba(88, 166, 255, 0.14);
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+}
+
+body {
+  margin: 0;
+  padding: 3rem 1.25rem;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.55;
+}
+
+main {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 2.5rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.45);
+}
+
+h1 {
+  margin-top: 0;
+  color: var(--accent);
+}
+
+a {
+  color: var(--accent);
+}
+
+a:hover,
+a:focus-visible {
+  color: #8cc2ff;
+}
+
+.dashboards {
+  display: grid;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.dashboard {
+  display: block;
+  padding: 1.25rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface-raised);
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease,
+    background 0.15s ease;
+}
+
+.dashboard:hover,
+.dashboard:focus-visible {
+  border-color: var(--accent);
+  background: #212b37;
+  box-shadow: 0 4px 18px rgba(88, 166, 255, 0.22);
+}
+
+.dashboard h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.1rem;
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+.dashboard h2::after {
+  content: " \2192";
+  text-decoration: none;
+}
+
+.dashboard p {
+  margin: 0;
+  color: var(--text-muted);
+}
+
+.dashboard .kind {
+  display: inline-block;
+  margin-top: 0.75rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.boards {
+  margin: 2rem 0 0;
+  padding: 1.25rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface-raised);
+}
+
+.boards h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+}
+
+.boards ul {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.boards li {
+  margin: 0.35rem 0;
+}
+
+.note {
+  margin: 2rem 0 0;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.links {
+  margin: 1.5rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.links li {
+  margin: 0.5rem 0;
+}
