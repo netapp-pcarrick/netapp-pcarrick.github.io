@@ -60,6 +60,34 @@
         margin: 0;
         color: #5e6c84;
       }
+      .dashboard .kind {
+        display: inline-block;
+        margin-top: 0.75rem;
+        padding: 0.15rem 0.5rem;
+        border-radius: 4px;
+        background: #e7f0fb;
+        color: #0067c5;
+        font-size: 0.75rem;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+      .boards {
+        margin: 2rem 0 0;
+        padding: 1.25rem;
+        border-radius: 8px;
+        background: #f5f7fa;
+      }
+      .boards h2 {
+        margin: 0 0 0.5rem;
+        font-size: 1rem;
+      }
+      .boards ul {
+        margin: 0;
+        padding-left: 1.25rem;
+      }
+      .boards li {
+        margin: 0.35rem 0;
+      }
       .note {
         margin: 2rem 0 0;
         font-size: 0.9rem;
@@ -77,24 +105,39 @@
       <section class="dashboards" aria-label="FY27 dashboards">
         <a
           class="dashboard"
-          href="https://github.com/orgs/NetAppDocOps/projects/20/views/6"
+          href="https://cursor.com/dashboard/shared-canvases?shareId=canvas-GoqsD9i1racFqnYRiyRh8XZs"
         >
           <h2>Ceremony readiness</h2>
           <p>Triage, icebox, and backlog-refinement preparation.</p>
+          <span class="kind">Open shared canvas</span>
         </a>
         <a
           class="dashboard"
-          href="https://github.com/orgs/NetAppDocOps/projects/20/views/5"
+          href="https://cursor.com/dashboard/shared-canvases?shareId=canvas-4Do_08zPFeTN3WxapXwzwAfo"
         >
           <h2>Delivery overview</h2>
           <p>Commitments, outcomes, capacity, and work in progress.</p>
+          <span class="kind">Open shared canvas</span>
         </a>
       </section>
+      <section class="boards" aria-label="FY27 operations board views">
+        <h2>Source board views</h2>
+        <ul>
+          <li>
+            <a href="https://github.com/orgs/NetAppDocOps/projects/20/views/6"
+              >Project 20, view 6 — product backlog and ceremony prep</a
+            >
+          </li>
+          <li>
+            <a href="https://github.com/orgs/NetAppDocOps/projects/20/views/5"
+              >Project 20, view 5 — current sprint and delivery</a
+            >
+          </li>
+        </ul>
+      </section>
       <p class="note">
-        Cards open the FY27 operations board on GitHub, which is the source of
-        record for both views. The interactive canvas dashboards are not linked
-        here because their previous share links were retired; re-publish the
-        canvases to add them.
+        The cards open the interactive Cursor canvases. The FY27 operations board
+        remains the source of record for status and field values.
       </p>
       <p><a href="../">Back to DocOps</a></p>
     </main>
