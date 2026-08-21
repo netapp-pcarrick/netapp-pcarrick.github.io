@@ -33,16 +33,36 @@
         margin: 2rem 0;
       }
       .dashboard {
+        display: block;
         padding: 1.25rem;
         border: 1px solid #dfe1e6;
         border-radius: 8px;
+        text-decoration: none;
+        color: inherit;
+        transition: border-color 0.15s ease, box-shadow 0.15s ease;
+      }
+      .dashboard:hover,
+      .dashboard:focus-visible {
+        border-color: #0067c5;
+        box-shadow: 0 4px 14px rgba(0, 103, 197, 0.16);
       }
       .dashboard h2 {
         margin: 0 0 0.5rem;
         font-size: 1.1rem;
+        color: #0067c5;
+        text-decoration: underline;
+      }
+      .dashboard h2::after {
+        content: " \2192";
+        text-decoration: none;
       }
       .dashboard p {
         margin: 0;
+        color: #5e6c84;
+      }
+      .note {
+        margin: 2rem 0 0;
+        font-size: 0.9rem;
         color: #5e6c84;
       }
       a {
@@ -55,15 +75,27 @@
       <h1>FY27 DocOps Operations</h1>
       <p>Ceremony readiness and delivery views for the NetApp DocOps FY27 operating cadence.</p>
       <section class="dashboards" aria-label="FY27 dashboards">
-        <article class="dashboard">
+        <a
+          class="dashboard"
+          href="https://github.com/orgs/NetAppDocOps/projects/20/views/6"
+        >
           <h2>Ceremony readiness</h2>
           <p>Triage, icebox, and backlog-refinement preparation.</p>
-        </article>
-        <article class="dashboard">
+        </a>
+        <a
+          class="dashboard"
+          href="https://github.com/orgs/NetAppDocOps/projects/20/views/5"
+        >
           <h2>Delivery overview</h2>
           <p>Commitments, outcomes, capacity, and work in progress.</p>
-        </article>
+        </a>
       </section>
+      <p class="note">
+        Cards open the FY27 operations board on GitHub, which is the source of
+        record for both views. The interactive canvas dashboards are not linked
+        here because their previous share links were retired; re-publish the
+        canvases to add them.
+      </p>
       <p><a href="../">Back to DocOps</a></p>
     </main>
   </body>
