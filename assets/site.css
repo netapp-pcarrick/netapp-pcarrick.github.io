@@ -51,6 +51,20 @@ a:focus-visible {
   margin: 2rem 0;
 }
 
+.section-title {
+  margin: 0;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.section-intro {
+  margin: -0.5rem 0 0;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
 .dashboard {
   display: block;
   padding: 1.25rem;
@@ -70,14 +84,14 @@ a:focus-visible {
   box-shadow: 0 4px 18px rgba(88, 166, 255, 0.22);
 }
 
-.dashboard h2 {
+.dashboard h3 {
   margin: 0 0 0.5rem;
   font-size: 1.1rem;
   color: var(--accent);
   text-decoration: underline;
 }
 
-.dashboard h2::after {
+.dashboard h3::after {
   content: " \2192";
   text-decoration: none;
 }
