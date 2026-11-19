@@ -48,14 +48,21 @@ body {
   line-height: 1.55;
 }
 
+/* Hub pages with cards use the window's width and lay the cards out in a
+   grid; link-only pages keep the narrow reading column. */
 main {
-  max-width: 720px;
+  box-sizing: border-box;
+  max-width: 1180px;
   margin: 0 auto;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 12px;
   box-shadow: var(--shadow);
   overflow: hidden;
+}
+
+main:not(:has(.dashboard)) {
+  max-width: 720px;
 }
 
 .masthead {
@@ -93,6 +100,7 @@ main {
 
 .masthead p {
   margin: 0;
+  max-width: 72ch;
   color: var(--band-ink-2);
 }
 
@@ -122,8 +130,14 @@ a:focus-visible {
 
 .dashboards {
   display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 20rem), 1fr));
   gap: 1rem;
   margin: 2rem 0;
+}
+
+.dashboards > .section-title,
+.dashboards > .section-intro {
+  grid-column: 1 / -1;
 }
 
 .section-title {
@@ -137,12 +151,15 @@ a:focus-visible {
 
 .section-intro {
   margin: -0.5rem 0 0;
+  max-width: 80ch;
   font-size: 0.9rem;
   color: var(--text-muted);
 }
 
 .dashboard {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
   padding: 1.25rem;
   border: 1px solid var(--border);
   border-left: 4px solid var(--accent);
@@ -173,11 +190,13 @@ a:focus-visible {
 }
 
 .dashboard p {
+  flex: 1 0 auto;
   margin: 0;
   color: var(--text-muted);
 }
 
 .dashboard .kind {
+  align-self: flex-start;
   display: inline-block;
   margin-top: 0.75rem;
   padding: 0.15rem 0.5rem;
@@ -214,6 +233,7 @@ a:focus-visible {
 
 .note {
   margin: 2rem 0 0;
+  max-width: 80ch;
   font-size: 0.9rem;
   color: var(--text-muted);
 }
