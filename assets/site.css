@@ -25,7 +25,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="light"]) {
     --bg: #000000;
     --surface: #333333;
     --surface-raised: #3b3b3d;
@@ -38,6 +38,25 @@
     --accent-soft: #25006d;
     --shadow: 0 4px 18px rgba(0, 0, 0, 0.45);
   }
+}
+
+:root[data-theme="dark"] {
+  --bg: #000000;
+  --surface: #333333;
+  --surface-raised: #3b3b3d;
+  --surface-hover: #25006d;
+  --border: #58575b;
+  --text: #ffffff;
+  --text-muted: #edeaef;
+  --accent: #c4a6ff;
+  --accent-hover: #efe5ff;
+  --accent-soft: #25006d;
+  --shadow: 0 4px 18px rgba(0, 0, 0, 0.45);
+  color-scheme: dark;
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
 }
 
 body {
@@ -265,6 +284,15 @@ a:focus-visible {
 .links a::after {
   content: " \2192";
 }
+
+/* Light, dark or auto switch in the masthead. Per viewer, stored in this site's browser storage. */
+.masthead { position: relative; }
+.theme-switch { position: absolute; top: 1.2rem; right: 1.5rem; display: inline-flex; gap: 2px; padding: 3px; border-radius: 8px; background: rgb(255 255 255 / 0.1); }
+.theme-switch button { font: inherit; font-size: 0.78rem; font-weight: 600; min-height: 32px; padding: 4px 12px; border: 0; border-radius: 6px; background: transparent; color: var(--band-ink-2); cursor: pointer; }
+.theme-switch button:hover { color: var(--band-ink); background: rgb(255 255 255 / 0.12); }
+.theme-switch button[aria-pressed="true"] { background: #7b27ff; color: #ffffff; }
+.theme-switch button:focus-visible { outline: 2px solid var(--band-accent); outline-offset: 2px; }
+@media (max-width: 560px) { .theme-switch { position: static; justify-self: start; } }
 
 @media (max-width: 560px) {
   body { padding: 1rem; }
