@@ -1,22 +1,22 @@
-/* NetApp DocOps hub. Palette and type follow the NetApp slide template
-   (Custom 83) and match the DocOps Claude artifacts. */
+/* NetApp DocOps hub. Colours follow the NetApp Brand Guidelines 2026 (assets.netapp.com) and match
+   the DocOps Claude artifacts; type follows the guide's fallback fonts for internal material. */
 :root {
   color-scheme: light dark;
-  --bg: #f4f3f9;
-  --surface: #fdfdff;
+  --bg: #edeaef;
+  --surface: #ffffff;
   --surface-raised: #ffffff;
-  --surface-hover: #f7f3ff;
-  --border: #dbd8e7;
-  --text: #160f33;
-  --text-muted: #433c60;
-  --accent: #6a1fe8;
-  --accent-hover: #4f12b8;
-  --accent-soft: #eee6ff;
-  --shadow: 0 4px 18px rgba(36, 0, 109, 0.14);
-  --band: #24006d;
+  --surface-hover: #efe5ff;
+  --border: #d5d2d8;
+  --text: #000000;
+  --text-muted: #333333;
+  --accent: #7b27ff;
+  --accent-hover: #25006d;
+  --accent-soft: #efe5ff;
+  --shadow: 0 4px 18px rgba(37, 0, 109, 0.14);
+  --band: #25006d;
   --band-ink: #ffffff;
-  --band-ink-2: #d9d0ff;
-  --band-accent: #00ddf3;
+  --band-ink-2: #edeaef;
+  --band-accent: #00ddf4;
   --font-display: "Franklin Gothic Demi Cond", "Franklin Gothic Medium", "Libre Franklin", "Arial Narrow", Arial, sans-serif;
   --font-body: Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-family: var(--font-body);
@@ -26,16 +26,16 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #0c0720;
-    --surface: #150e2e;
-    --surface-raised: #1b1338;
-    --surface-hover: #241a4a;
-    --border: #2e2650;
-    --text: #f1eefa;
-    --text-muted: #c6bfdd;
-    --accent: #b08aff;
-    --accent-hover: #cdb4ff;
-    --accent-soft: #2a1a58;
+    --bg: #000000;
+    --surface: #333333;
+    --surface-raised: #3b3b3d;
+    --surface-hover: #25006d;
+    --border: #58575b;
+    --text: #ffffff;
+    --text-muted: #edeaef;
+    --accent: #c4a6ff;
+    --accent-hover: #efe5ff;
+    --accent-soft: #25006d;
     --shadow: 0 4px 18px rgba(0, 0, 0, 0.45);
   }
 }
